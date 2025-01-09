@@ -34,3 +34,10 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: erion-kurteshi/pruefung2_m324_Erion_Kurteshi
+          
+      - name: AI Code Review
+        uses: zhenghaoz/gpt-code-review@v1
+        with:
+            OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+            open_ai_model: gpt-3.5-turbo
+            with-comment: true
